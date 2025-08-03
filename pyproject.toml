@@ -1,0 +1,23 @@
+[project]
+name = "pyadblocker"
+version = "0.1.0"
+description = "A modern and minimal Python-based adblocker"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+
+authors = [
+  { name="Sanjay Sheel" }
+]
+
+dependencies = []
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/pyadblocker"
+
+[tool.setuptools]
+packages = ["pyadblocker"]   # this must match folder name
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"

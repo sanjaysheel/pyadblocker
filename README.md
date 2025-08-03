@@ -1,7 +1,7 @@
 # pyadblock
 
 <code>
-  pyadblock/                         🔹 Unique & Modern Python AdBlocker
+  pyadblocker/                         🔹 Unique & Modern Python AdBlocker
   ├── main.py                        ▶ CLI/test entry point
   ├── core/
   │   ├── engine.py                  ▶ Main controller: URL, HTML, script filters
