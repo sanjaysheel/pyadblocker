@@ -1,0 +1,18 @@
+# Universal Domain Rules (.udr format)
+
+# URL patterns (simple contains match)
+ads.google.com
+doubleclick.net
+partner.googleadservices.com
+
+# === HTML SELECTORS ===
+.selectors:
+.ad-banner
+#sponsor
+.promoted
+
+# === JS Keywords ===
+.js:
+adsbygoogle
+googletag
+adunit

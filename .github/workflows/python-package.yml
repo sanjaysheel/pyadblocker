@@ -1,0 +1,43 @@
+name: Veilblock CI
+
+on:
+  push:
+    branches: [ main, feature/** ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.11"
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pytest flake8 pytest-cov
+
+    - name: Lint with flake8
+      run: |
+        flake8 pyadblock/ tests/
+
+    - name: Run tests with coverage
+      run: |
+        pytest --cov=pyadblock tests/
+
+    - name: Check rule files exist
+      run: |
+        for file in rules/*.udr; do
+          if [ ! -s "$file" ]; then
+            echo "::error::Empty or missing rule file: $file"
+            exit 1
+          fi
+        done

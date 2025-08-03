@@ -1,0 +1,34 @@
+# social.udr – Blocks social media embeds, share buttons, and widgets
+# Legal-safe: Manually curated, no EasyList or AdGuard copied
+
+# Social media domains
+connect.facebook.net
+platform.twitter.com
+platform.instagram.com
+widgets.pinterest.com
+apis.google.com
+staticxx.facebook.com
+assets.tumblr.com
+cdn.embedly.com
+platform.linkedin.com
+
+.selectors:
+.fb_iframe_widget
+.twitter-tweet
+.instagram-media
+.pinterest-widget
+.share-buttons
+[data-social]
+iframe[src*="facebook.com"]
+iframe[src*="twitter.com"]
+iframe[src*="instagram.com"]
+div[class*="social"]
+ul[class*="share"]
+
+.js:
+FB
+twttr
+instgrm
+IN
+PinUtils
+window.__sharethis__
